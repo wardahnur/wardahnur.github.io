@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toko Makanan — Aneka Pilihan</title>
+  <style>
+    :root{
+      --cream: #FFF8EE;
+      --white: #ffffff;
+      --maroon: #800020;
+      --muted: #8a7b72;
+      --shadow: 0 6px 18px rgba(16,16,16,0.08);
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    body{
+      margin:0;
+      background: var(--cream);
+      color:#333;
+      padding:20px;
+    }
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px;
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .logo div{
+      background:var(--maroon);
+      color:var(--white);
+      padding:10px;
+      border-radius:8px;
+      font-weight:bold;
+    }
+    .search input{
+      padding:8px 12px;
+      border-radius:8px;
+      border:1px solid #ccc;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+    .card{
+      background:var(--white);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform 0.3s;
+    }
+    .card:hover{
+      transform:translateY(-5px);
+    }
+    .card img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      transition:transform 0.5s;
+    }
+    .card:hover img{
+      transform:scale(1.05);
+    }
+    .card-body{
+      padding:15px;
+    }
+    .title{
+      font-weight:bold;
+      margin-bottom:5px;
+    }
+    .price{
+      color:var(--maroon);
+      font-weight:bold;
+      margin-bottom:10px;
+    }
+    button{
+      padding:8px 12px;
+      border:none;
+      border-radius:8px;
+      background:var(--maroon);
+      color:var(--white);
+      cursor:pointer;
+      transition:background 0.3s;
+    }
+    button:hover{
+      background:#a03040;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div>FM</div>
+      <h1>Food Mart</h1>
+    </div>
+    <div class="search">
+      <input type="text" id="search" placeholder="Cari makanan...">
+    </div>
+  </header>
+
+  <main>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <script>
+    const products = [
+      {name:'Chocolate Cake', price:50000, img:'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop'},
+      {name:'Burger Special', price:35000, img:'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop'},
+      {name:'Sushi Roll', price:60000, img:'https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1200&auto=format&fit=crop'},
+      {name:'Pizza Margherita', price:80000, img:'https://images.unsplash.com/photo-1601924579629-1e33d54f2f58?q=80&w=1200&auto=format&fit=crop'},
+      {name:'Salad Segar', price:25000, img:'https://images.unsplash.com/photo-1556912998-6e5c3a3553af?q=80&w=1200&auto=format&fit=crop'}
+    ];
+
+    const grid = document.getElementById('grid');
+    const searchInput = document.getElementById('search');
+
+    function render(items){
+      grid.innerHTML = '';
+      items.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <div class="card-body">
+            <div class="title">${p.name}</div>
+            <div class="price">Rp ${p.price.toLocaleString()}</div>
+            <button>Beli Sekarang</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    searchInput.addEventListener('input', e => {
+      const val = e.target.value.toLowerCase();
+      const filtered = products.filter(p => p.name.toLowerCase().includes(val));
+      render(filtered);
+    });
+
+    render(products);
+  </script>
+</body>
+</html>
