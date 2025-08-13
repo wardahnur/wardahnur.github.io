@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Klinik Keperawatan Spesialis Anak – Zahirah</title>
+  <meta name="description" content="Zahirah — Klinik Keperawatan Spesialis Anak oleh Wardah Nur Zahirah. Layanan ramah anak, perawat spesialis, konsultasi, imunisasi, home care, dan telekonsultasi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css"/>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="brand">
+        <span class="brand-logo" aria-hidden="true">👶</span>
+        <span class="brand-name">Zahirah</span>
+        <span class="brand-tag">Klinik Anak</span>
+      </a>
+      <button class="nav-toggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home">Beranda</a>
+        <a href="#services">Layanan</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#shop">Paket</a>
+        <a href="#contact">Kontak</a>
+        <button class="btn small calm-toggle" id="calmToggle" aria-pressed="false" title="Mode Tenang untuk anak">
+          🌙 Mode Tenang
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Floating decor -->
+  <div class="float float-a" aria-hidden="true"></div>
+  <div class="float float-b" aria-hidden="true"></div>
+  <div class="float float-c" aria-hidden="true"></div>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-text">
+        <h1>
+          Keperawatan Spesialis Anak <span class="grad">Zahirah</span>
+        </h1>
+        <p>
+          Selamat datang di klinik anak modern milik <b>Wardah Nur Zahirah</b>.
+          Tim perawat spesialis kami menghadirkan perawatan penuh empati – dari
+          konsultasi, imunisasi, terapi tumbuh kembang, hingga <i>home care</i>.
+        </p>
+        <div class="hero-cta">
+          <a href="#services" class="btn">Lihat Layanan</a>
+          <a href="#shop" class="btn outline">Pilih Paket</a>
+        </div>
+        <div class="trust">
+          <div>⭐ 4.9/5 (2.1k ulasan)</div>
+          <div>✅ Perawat Spesialis Tersertifikasi</div>
+          <div>🧸 Ramah Anak & Ruang Bermain</div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="slider" aria-roledescription="carousel" aria-label="Galeri klinik anak">
+          <button class="slider-btn prev" aria-label="Sebelumnya">‹</button>
+          <div class="slides">
+            <figure class="slide is-active">
+              <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop" alt="Perawat anak ramah menyapa pasien kecil"/>
+              <figcaption>Perawat Ramah</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" alt="Ruang pemeriksaan anak yang ceria"/>
+              <figcaption>Ruang Ceria</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="https://images.unsplash.com/photo-1580281657527-47e05d89cc85?q=80&w=1200&auto=format&fit=crop" alt="Imunisasi anak dengan teknik tanpa takut"/>
+              <figcaption>Imunisasi Nyaman</figcaption>
+            </figure>
+          </div>
+          <button class="slider-btn next" aria-label="Berikutnya">›</button>
+          <div class="dots" role="tablist" aria-label="Slide picker"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section container">
+      <header class="section-head">
+        <h2>Layanan Unggulan</h2>
+        <p>Kami fokus pada kenyamanan anak dan ketenangan orang tua.</p>
+      </header>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-icon">🩺</div>
+          <h3>Konsultasi Spesialis</h3>
+          <p>Deteksi dini, nutrisi, tumbuh-kembang, dan tata laksana penyakit anak.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">💉</div>
+          <h3>Imunisasi & Vaksin</h3>
+          <p>Jadwal lengkap, pemantauan efek samping, dan edukasi orang tua.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🏠</div>
+          <h3>Home Care</h3>
+          <p>Perawat datang ke rumah untuk perawatan harian dan pasca-rawat.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">🎧</div>
+          <h3>Telekonsultasi</h3>
+          <p>Konsultasi video aman dan terjadwal, resep elektronik & rujukan.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SHOP / PACKAGES -->
+    <section id="shop" class="section container">
+      <header class="section-head">
+        <h2>Paket Perawatan</h2>
+        <p>Pilih paket sesuai kebutuhan buah hati. Tambahkan ke keranjang dan checkout.</p>
+      </header>
+      <div class="shop-grid" id="products">
+        <!-- Products injected by JS -->
+      </div>
+
+      <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+        <div class="cart-head">
+          <h3>Keranjang</h3>
+          <button class="icon-btn" id="closeCart" aria-label="Tutup keranjang">✕</button>
+        </div>
+        <div class="cart-body" id="cartItems"></div>
+        <div class="cart-foot">
+          <div class="total"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+          <button class="btn full" id="checkoutBtn">Checkout</button>
+        </div>
+      </aside>
+
+      <button class="cart-fab" id="openCart" aria-label="Buka keranjang">
+        🛒 <span class="badge" id="cartCount">0</span>
+      </button>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section container">
+      <header class="section-head">
+        <h2>Galeri Ceria</h2>
+        <p>Suasana hangat dan penuh warna agar anak lebih rileks.</p>
+      </header>
+      <div class="masonry">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop" alt="Perawat tersenyum"/>
+        <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12?q=80&w=1200&auto=format&fit=crop" alt="Anak bermain di ruang tunggu"/>
+        <img src="https://images.unsplash.com/photo-1581056771101-24c5f9b3d6b2?q=80&w=1200&auto=format&fit=crop" alt="Peralatan medis bersih"/>
+        <img src="https://images.unsplash.com/photo-1542736667-069246bdbc74?q=80&w=1200&auto=format&fit=crop" alt="Dinding mural anak"/>
+      </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section id="appointment" class="section container">
+      <header class="section-head">
+        <h2>Daftar Janji Temu</h2>
+        <p>Isi data singkat, tim kami akan mengonfirmasi melalui WhatsApp.</p>
+      </header>
+      <form class="form" id="apptForm">
+        <div class="grid">
+          <label>Nama Orang Tua
+            <input type="text" name="parent" required placeholder="Nama lengkap"/>
+          </label>
+          <label>Nama Anak
+            <input type="text" name="child" required placeholder="Nama anak"/>
+          </label>
+          <label>Usia Anak
+            <input type="number" name="age" min="0" max="18" required placeholder="Contoh: 5"/>
+          </label>
+          <label>Tanggal
+            <input type="date" name="date" required/>
+          </label>
+        </div>
+        <label>Keluhan / Tujuan
+          <textarea name="notes" rows="3" placeholder="Contoh: imunisasi, batuk 3 hari, dsb."></textarea>
+        </label>
+        <button class="btn" type="submit">Kirim Permintaan</button>
+      </form>
+      <div class="toast" id="apptToast" role="status" aria-live="polite">Permintaan janji temu terkirim ✅</div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container contact">
+      <div class="contact-card">
+        <h3>Kontak & Lokasi</h3>
+        <p><strong>Zahirah – Klinik Keperawatan Spesialis Anak</strong><br/>Pemilik: Wardah Nur Zahirah</p>
+        <p>Jl. Sehat Ceria No. 12, Jakarta<br/>Buka: 08.00–20.00 WIB</p>
+        <div class="contact-actions">
+          <a class="btn" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer">Chat WhatsApp</a>
+          <a class="btn outline" href="mailto:hello@zahirah.clinic">Email Kami</a>
+        </div>
+      </div>
+      <iframe title="Peta Lokasi" src="https://maps.google.com/maps?q=Jakarta&t=m&z=12&output=embed&iwloc=near" loading="lazy"></iframe>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Zahirah — Klinik Keperawatan Spesialis Anak. Semua hak cipta.</p>
+        <a href="#home" class="top-link" aria-label="Kembali ke atas">↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal" id="checkoutModal" aria-hidden="true" role="dialog" aria-labelledby="coTitle">
+    <div class="modal-dialog">
+      <button class="icon-btn modal-close" id="closeCheckout" aria-label="Tutup">✕</button>
+      <h3 id="coTitle">Checkout</h3>
+      <div id="orderSummary" class="order-summary"></div>
+      <form id="checkoutForm" class="form compact">
+        <label>Nama Lengkap
+          <input type="text" name="name" required/>
+        </label>
+        <label>No. WhatsApp
+          <input type="tel" name="phone" required placeholder="08xxxxxxxxxx"/>
+        </label>
+        <label>Catatan
+          <textarea name="note" rows="2" placeholder="Contoh: alergi obat, waktu kunjungan"></textarea>
+        </label>
+        <button class="btn full" type="submit">Buat Pesanan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
