@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Aneka Makanan</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffdf7;
+      color: #4b1c1c;
+    }
+
+    header {
+      background: linear-gradient(90deg, #fff7e6, #fffdf7);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      color: #800000;
+      font-size: 26px;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #4b1c1c;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #800000;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: #fff7e6;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+      color: #800000;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #4b1c1c;
+    }
+
+    /* Produk */
+    .produk-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      animation: slideUp 1.5s ease-in-out;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+    .card-body h3 {
+      margin: 10px 0;
+      font-size: 20px;
+      color: #800000;
+    }
+    .card-body p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #4b1c1c;
+    }
+    .price {
+      font-weight: bold;
+      color: #b22222;
+      margin-bottom: 10px;
+    }
+    .btn {
+      background: #800000;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #b22222;
+    }
+
+    /* Cart */
+    .cart {
+      position: fixed;
+      right: -400px;
+      top: 0;
+      width: 320px;
+      height: 100%;
+      background: #fff7e6;
+      box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+      transition: right 0.4s ease;
+      padding: 20px;
+      z-index: 2000;
+    }
+    .cart.active {
+      right: 0;
+    }
+    .cart h3 {
+      margin-top: 0;
+      color: #800000;
+    }
+    .cart ul {
+      list-style: none;
+      padding: 0;
+      max-height: 60%;
+      overflow-y: auto;
+    }
+    .cart ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .cart .btn {
+      width: 100%;
+      margin-top: 15px;
+    }
+    .cart-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #800000;
+      color: white;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 2100;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+    .total {
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: right;
+      color: #800000;
+    }
+
+    footer {
+      background: #800000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
