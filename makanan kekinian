@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makanan Kekinian - Café Remaja</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fffdf9;
+      color: #3e2e1a;
+    }
+    header {
+      background: linear-gradient(135deg, #a9745b, #fff);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      margin: 0 10px;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffd7b5;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    .order-buttons {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .order-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      background-color: #a9745b;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .order-buttons a:hover {
+      background-color: #d4a373;
+    }
+    footer {
+      background-color: #3e2e1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Makanan Kekinian</h1>
+    <p>Café Remaja by Wardah Nur Zahirah</p>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order Online</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section id="menu" class="menu">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?coffee" alt="Coffee">
+      <h3>Latte Coklat Susu</h3>
+      <p>IDR 25K</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?dessert" alt="Dessert">
+      <h3>Dessert Unik</h3>
+      <p>IDR 20K</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?milkshake" alt="Milkshake">
+      <h3>Milkshake Remaja</h3>
+      <p>IDR 30K</p>
+    </div>
+  </section>
+
+  <section id="order" class="order-buttons">
+    <h2>Order Online</h2>
+    <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+    <a href="https://gofood.co.id" target="_blank">GoFood</a>
+    <a href="https://grab.com/id/food/" target="_blank">GrabFood</a>
+  </section>
+
+  <footer id="contact">
+    <p>📍 Jl. Contoh No. 123, Jakarta</p>
+    <p>📞 0812-3456-7890</p>
+    <p>&copy; 2025 Makanan Kekinian - Wardah Nur Zahirah</p>
+  </footer>
+</body>
+</html>
