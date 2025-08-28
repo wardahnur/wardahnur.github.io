@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caffe Remaja</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf3;
+      color: #4b2e1e;
+    }
+
+    header {
+      background: linear-gradient(135deg, #c59d7e, #fff);
+      padding: 20px;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: slideDown 1s ease;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #fff;
+      font-weight: bold;
+      background-color: #8d674a;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #c59d7e;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    footer {
+      background-color: #4b2e1e;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      margin-top: 40px;
+    }
+
+    /* Animasi */
+    @keyframes slideDown {
+      from {transform: translateY(-100%); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Button Interaktif */
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #c59d7e;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #8d674a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Caffe Remaja</h1>
+    <p>Aneka Makanan & Minuman Kekinian</p>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section id="menu" class="menu">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?coffee" alt="Coffee">
+      <h3>Cappuccino</h3>
+      <p>IDR 25K</p>
+      <a href="#" class="btn" onclick="order('Cappuccino')">Pesan</a>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?cake" alt="Cake">
+      <h3>Cheesecake</h3>
+      <p>IDR 30K</p>
+      <a href="#" class="btn" onclick="order('Cheesecake')">Pesan</a>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?milkshake" alt="Milkshake">
+      <h3>Milkshake Strawberry</h3>
+      <p>IDR 28K</p>
+      <a href="#" class="btn" onclick="order('Milkshake Strawberry')">Pesan</a>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?burger" alt="Burger">
+      <h3>Mini Burger</h3>
+      <p>IDR 35K</p>
+      <a href="#" class="btn" onclick="order('Mini Burger')">Pesan</a>
+    </div>
+  </section>
+
+  <footer id="kontak">
+    <p>📍 Jl. Contoh No.123, Jakarta</p>
+    <p>📞 0812-3456-7890</p>
+    <p>&copy; 2025 Caffe Remaja</p>
+  </footer>
+
+  <script>
+    function order(item) {
+      alert("Anda memesan " + item + ". Terima kasih!");
+    }
+  </script>
+</body>
+</html>
